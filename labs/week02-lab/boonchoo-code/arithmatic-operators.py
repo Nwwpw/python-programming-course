@@ -10,7 +10,7 @@ a = 15
 b = 4
 
 print(f"a = {a}, b = {b}")
-print()
+print("a = ", a,"b = ",b)
 
 # Addition (+)
 result_add = a + b
@@ -222,6 +222,7 @@ print("(2 + 3) * 4 =", (2 + 3) * 4, "(use parentheses)")
 print()
 
 # Mistake 3: Division by zero
+#ดักจับความผิดพลาดในโปรแกรม
 print("Division by zero:")
 try:
     result = 10 / 0
@@ -230,6 +231,7 @@ except ZeroDivisionError:
 print()
 
 # Mistake 4: Very large numbers
+#ค่าของข้อมูลยัดเข้าไปในตัวแปรไม่ได้
 print("Very large numbers:")
 large_num = 2 ** 100
 print(f"2 ** 100 = {large_num}")
@@ -269,6 +271,7 @@ print("   - Ask for weight (kg) and height (m)")
 print("   - Calculate: BMI = weight / (height ** 2)")
 print()
 
+#หา GPA
 print("5. Grade Average:")
 print("   - Ask for 3 test scores")
 print("   - Calculate average")
