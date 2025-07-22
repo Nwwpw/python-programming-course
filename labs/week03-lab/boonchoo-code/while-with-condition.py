@@ -7,7 +7,7 @@ while True:
             print(f"Thank you! You entered: {number}")
             break
         else:
-            print("Please enter a positive number!")
+            print("Please enter a positive number!") #ถ้าuserกรอกค่าติดลบ จะให้กรอกเลขที่มีค่าบวก
     except ValueError:
         print("That's not a valid number!")
 
@@ -15,19 +15,19 @@ while True:
 while True:
     print("\n=== Main Menu ===")
     print("1. Calculate Circle Area")
-    print("2. Calculate Rectangle Area")
-    print("3. Calculate Triangle Area")
+    print("2. Calculate Rectangle Area") #สี่เหลี่ยม
+    print("3. Calculate Triangle Area") #สามเหลี่ยม
     print("4. Exit")
     
     choice = input("Enter your choice (1-4): ")
     
     if choice == "1":
-        radius = float(input("Enter radius: "))
+        radius = float(input("Enter radius: ")) #radius=รัศมี
         if radius > 0:
             area = 3.14159 * radius * radius
             print(f"Circle area: {area:.2f}")
         else:
-            print("Radius must be positive!")
+            print("Radius must be positive!") #รัศมีต้องเป็นค่าบวก(โปรแกรมที่ดีควรตรวจ เพราะค่าติดลบไม่ได้)
             
     elif choice == "2":
         length = float(input("Enter length: "))

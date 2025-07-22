@@ -1,8 +1,11 @@
+#ทำแบบNested(ifในif)ก็ได้ เช็คusernameว่าใช่ไหม ถ้าใช่ไปpassword
+
 # Multiple conditions with logical operators
 username = "admin"
 password = "12345"
 is_active = True
 
+#(เกี่ยวกับตารางค่าความจริง)
 if username == "admin" and password == "12345" and is_active:
     print("Access granted")
 elif username == "admin" and password == "12345" and not is_active:
@@ -17,7 +20,7 @@ if day == "Saturday" or day == "Sunday":
 else:
     print("It's a weekday")
 
-# Nested if statements
+# Nested if statements (ทำแบบอื่นก็ได้ อย่างด้านบน แล้วแต่วิธีคิดของProgrammer)
 weather = "sunny"
 temperature = 28
 
