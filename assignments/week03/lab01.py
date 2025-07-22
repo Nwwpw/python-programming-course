@@ -10,10 +10,10 @@ age = int(input("Enter age: "))
 #--------------------------------------------------------
 # Your code here:
 if age >= 60:
-    print("Senior")
+    print("You're Senior")
 elif age >= 20:
-    print("Adult")
+    print("You're Adult")
 elif age >= 13:
-    print("Teenager")
+    print("You're Teenager")
 else:
-    print("Child")
+    print("You're Child")
