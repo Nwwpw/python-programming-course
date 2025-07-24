@@ -17,9 +17,9 @@ emergency_fund_percent = float(input("Percentage to save for emergency: ")) #เ
 investment_percent = float(input("Percentage to invest: ")) #เงินลงทุน
 
 #3. คำนวณข้อมูล
-Total_fixed_Expenses = rent_cost + transportation_cost #ค่าใช้จ่ายคงที่(ค่าเช่า + ค่าเดินทาง)
+Total_Fixed_Expenses = rent_cost + transportation_cost #ค่าใช้จ่ายคงที่(ค่าเช่า + ค่าเดินทาง)
 Total_Variable_Expenses = food_budget + entertainment_budget #ค่าใช้จ่ายไม่คงที่(ค่ากิน + ค่าพักผ่อน)
-Total_Expenses = Total_fixed_Expenses + Total_Variable_Expenses #ค่าใช้จ่ายทั้งหมด(ค่าใช้จ่ายคงที่+ค่าใช้จ่ายไม่คงที่)
+Total_Expenses = Total_Fixed_Expenses + Total_Variable_Expenses #ค่าใช้จ่ายทั้งหมด(ค่าใช้จ่ายคงที่+ค่าใช้จ่ายไม่คงที่)
 Remaining_Income = monthly_income - Total_Expenses #รายได้คงเหลือ(รายได้ต่อเดือน-ค่าใช้จ่ายทั้งหมด)
 Emergency_Fund_Amount = monthly_income * (emergency_fund_percent / 100) #เงินฉุกเฉิน(รายได้ต่อเดือนx(เผื่อสำหรับฉุกเฉิน ÷ 100))
 Investment_Amount = monthly_income * (investment_percent / 100) #เงินลงทุน(รายได้ต่อเดือนx(เงินลงทุน ÷ 100))
@@ -31,7 +31,7 @@ Expense_Ratio = (Total_Expenses / monthly_income) * 100 #สัดส่วน�
 #ทศนิยม2ตำแหน่ง คือ :.2f
 print("=== MONTHLY BUDGET REPORT ===") #หัวข้อรายงานงบประมาณรายเดือน
 print(f"Income: {monthly_income:.2f} THB") #รายได้ต่อเดือน
-print(f"Fixed Expenses: {Total_fixed_Expenses:.2f} THB") #ค่าใช้จ่ายคงที่
+print(f"Fixed Expenses: {Total_Fixed_Expenses:.2f} THB") #ค่าใช้จ่ายคงที่
 print(f"Variable Expenses: {Total_Variable_Expenses:.2f} THB") #ค่าใช้จ่ายไม่คงที่
 print(f"Total Expenses: {Total_Expenses:.2f} THB") #ค่าใช้จ่ายทั้งหมด
 print(f"Remaining: {Remaining_Income:.2f} THB") #รายได้ที่เหลือ หลังหักค่าใช้จ่าย
