@@ -1,5 +1,5 @@
 # Empty tuple
-empty_tuple = ()
+empty_tuple = () #()ในภาษาอังกฤษคือParentheses
 another_empty_tuple = tuple()
 
 # Tuple with values
@@ -8,10 +8,10 @@ rgb_color = (255, 128, 0)
 mixed_tuple = (1, "hello", 3.14, True)
 
 # Single element tuple (note the comma!)
-single_tuple = (42,)  # Without comma, it's just parentheses around a value
-not_a_tuple = (42)    # This is just an integer
+single_tuple = (42,)  # Without comma, it's just parentheses around a value ต้องการให้มีแค่42ตัวเดียวให้ใส่,
+not_a_tuple = (42)    # This is just an integer ไม่ใส่,จะเป็น integer
 
-# Tuple from list
+# Tuple from list แปลงlistให้เป็นtuple
 my_list = [1, 2, 3, 4]
 my_tuple = tuple(my_list)
 

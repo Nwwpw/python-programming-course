@@ -6,10 +6,10 @@ print(f"Last color: {colors[-1]}")      # purple
 
 # Slicing (same as lists)
 print(f"First 3: {colors[0:3]}")        # ('red', 'green', 'blue')
-print(f"Last 2: {colors[-2:]}")         # ('yellow', 'purple')
-print(f"Every 2nd: {colors[::2]}")      # ('red', 'blue', 'purple')
+print(f"Last 2: {colors[-2:]}")         # ('yellow', 'purple') เอาตั้งแต่-2ไปจนถึงตัวสุดท้าย ได้indexที่3,4
+print(f"Every 2nd: {colors[::2]}")      # ('red', 'blue', 'purple') นับทีละ2 ได้indecที่1,3,5
 
-# Tuple unpacking
+# Tuple unpacking ระเบิดTupleออกมาเป็นสมาชิก (Listทำแบบนี้ไม่ได้)
 point = (10, 20)
 x, y = point
 print(f"x: {x}, y: {y}")                # x: 10, y: 20
@@ -19,7 +19,7 @@ person = ("Alice", 25, "Engineer")
 name, age, job = person
 print(f"Name: {name}, Age: {age}, Job: {job}")
 
-# Swapping variables using tuples
+# Swapping variables using tuples สลับเลข
 a = 5
 b = 10
 a, b = b, a
