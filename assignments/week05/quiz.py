@@ -157,6 +157,7 @@ def contact_book():
         else:
             print("Invalid choice! Please enter a number between 1-7.")
 
+#ไม่มีประโยชน์ไรเลย นอกจากทำให้โปรแกรมรันได้
 if __name__ == "__main__":
     print("Starting Contact Book Manager...")
     

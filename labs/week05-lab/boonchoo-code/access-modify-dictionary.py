@@ -5,6 +5,7 @@ student = {
     "gpa": 3.8,
     "courses": ["Python", "Java", "Calculus"]
 }
+#พวกname, ageคือkey / พวกAlice Smith, 20คือvalue
 
 # Accessing values by key
 print(f"Name: {student['name']}")           # Alice Smith
@@ -12,7 +13,7 @@ print(f"Age: {student['age']}")             # 20
 
 # Using get() method (safer)
 print(f"Major: {student.get('major')}")     # Computer Science
-print(f"Phone: {student.get('phone')}")     # None (key doesn't exist)
+print(f"Phone: {student.get('phone')}")     # None (key doesn't exist)->ไม่มีkeyที่ชื่อphone
 print(f"Phone: {student.get('phone', 'Not provided')}")  # Default value
 
 # Accessing nested data
@@ -28,7 +29,7 @@ print(f"Values: {list(student.values())}")
 print(f"Items: {list(student.items())}")
 
 
-""" modify dictionary """
+""" modify dictionary """ #modify=แก้
 
 
 # Creating a dictionary
@@ -40,17 +41,17 @@ inventory = {
 
 print(f"Original inventory: {inventory}")
 
-# Adding new items
+# Adding new items (ทีแรกไม่มีองุ่น,สตอ เลยเพิ่มข้อมูลเข้าไปจากที่key=3->key=5)
 inventory["grapes"] = 40
 inventory["strawberries"] = 15
 print(f"After adding items: {inventory}")
 
-# Updating existing items
+# Updating existing items (แก้จำนวนapple=25,เพิ่มbananaไปอีก20)
 inventory["apples"] = 45  # Reduce apple count
 inventory["bananas"] += 20  # Add more bananas
 print(f"After updates: {inventory}")
 
-# Using update() method
+# Using update() method (เหมือน44-47 องุ่น,สตอ)
 new_items = {"mangoes": 35, "pineapples": 10}
 inventory.update(new_items)
 print(f"After bulk update: {inventory}")
@@ -59,11 +60,11 @@ print(f"After bulk update: {inventory}")
 inventory.update(apples=60, bananas=55)
 print(f"After keyword update: {inventory}")
 
-# Removing items
+# Removing items (ลบ แต่มีการเอาข้อมูลมาทำงานต่อทีหลัง.)
 removed_item = inventory.pop("strawberries")  # Remove and return value
 print(f"Removed {removed_item} strawberries")
 
-del inventory["pineapples"]  # Remove without returning
+del inventory["pineapples"]  # Remove without returning (ดีดpineapplesออกใช้methodชื่อdel)(ลบ ไม่มีการเอาข้อมูลมาทำงานต่อทีหลัง.)
 print(f"After deletions: {inventory}")
 
 # Remove last item (Python 3.7+)

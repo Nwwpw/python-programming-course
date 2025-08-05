@@ -19,27 +19,27 @@ text = "hello world hello python"
 word_count = {}
 for word in text.split():
     word_count[word] = word_count.get(word, 0) + 1
-print(f"Word count: {word_count}")
+print(f"Word count: {word_count}") #Word count: {'hello': 2, 'world': 1, 'python': 1}
 
 # Use SETS when:
 # 1. You need unique elements
 email_subscribers = {"alice@email.com", "bob@email.com", "charlie@email.com"}
 email_subscribers.add("alice@email.com")  # Won't add duplicate
-print(f"Unique subscribers: {email_subscribers}")
+print(f"Unique subscribers: {email_subscribers}") #Unique subscribers: {'charlie@email.com', 'bob@email.com', 'alice@email.com'}
 
 # 2. Mathematical set operations
 active_users = {"user1", "user2", "user3", "user4"}
 premium_users = {"user2", "user4", "user5"}
 active_premium = active_users & premium_users
-print(f"Active premium users: {active_premium}")
+print(f"Active premium users: {active_premium}") #Active premium users: {'user4', 'user2'}
 
 # 3. Fast membership testing
 valid_codes = {"A001", "B002", "C003", "D004"}
 user_code = "B002"
-if user_code in valid_codes:  # O(1) average time
+if user_code in valid_codes:  # O(1) average time เป็นวิธีการวัดประสิทธิภาพของโปรแกรม
     print("Valid code!")
 
 # 4. Removing duplicates from lists
 numbers_with_duplicates = [1, 2, 2, 3, 3, 3, 4, 5]
 unique_numbers = list(set(numbers_with_duplicates))
-print(f"Unique numbers: {unique_numbers}")
+print(f"Unique numbers: {unique_numbers}") #Unique numbers: [1, 2, 3, 4, 5]
