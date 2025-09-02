@@ -93,7 +93,7 @@ def get_circle_info(radius):
     pi = 3.14159
     area = pi * radius * radius
     circumference = 2 * pi * radius
-    return area, circumference
+    return area, circumference #returnค่ากลับได้มากกว่า1ค่า ไม่เหมือนcที่ได้ค่าเดียว
 
 print("Circle calculations:")
 radius = 5
@@ -301,10 +301,10 @@ print("\n=== PART 7: ADVANCED EXAMPLES ===")
 # Example 1: Text analyzer
 def analyze_text(text):
     """Analyzes text and returns statistics"""
-    words = len(text.split())
-    chars_with_spaces = len(text)
-    chars_without_spaces = len(text.replace(" ", ""))
-    sentences = text.count('.') + text.count('!') + text.count('?')
+    words = len(text.split())   #นับคำ
+    chars_with_spaces = len(text)   #นับอักขระ เอาช่องว่าง
+    chars_without_spaces = len(text.replace(" ", ""))   #นับอักขระ โดยไม่เอาช่องว่าง
+    sentences = text.count('.') + text.count('!') + text.count('?')     # นับจำนวนประโยค (จาก ., !, ?)
     
     return {
         'words': words,
@@ -336,7 +336,7 @@ def calculate_stats(numbers):
     return {
         'sum': total,
         'count': count,
-        'average': round(average, 2),
+        'average': round(average, 2),   #ทศนิยม2ตำแหน่ง
         'minimum': minimum,
         'maximum': maximum
     }
@@ -350,6 +350,7 @@ for key, value in stats.items():
 print()
 
 # Example 3: Fibonacci sequence
+#ex.0 1 1 2 3 5 8 13 21
 def fibonacci(n):
     """Returns the nth Fibonacci number"""
     if n <= 0:

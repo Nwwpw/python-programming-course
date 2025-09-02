@@ -1,5 +1,5 @@
-# Use DICTIONARIES when:
-# 1. You need key-value relationships
+# Use DICTIONARIES when: (ใช้ DICTIONARIES เมื่อ:)
+# 1. You need key-value relationships (ต้องการเก็บความสัมพันธ์แบบ key-value)
 student_info = {
     "id": "12345",
     "name": "Alice",
@@ -7,39 +7,70 @@ student_info = {
     "gpa": 3.8
 }
 
-# 2. Fast lookups by key
+# 2. Fast lookups by key (ต้องการค้นหาข้อมูลโดยใช้ key ได้เร็ว)
 phone_book = {
     "Alice": "123-456-7890",
     "Bob": "987-654-3210",
     "Charlie": "555-123-4567"
 }
 
-# 3. Counting occurrences
+# 3. Counting occurrences (นับจำนวนครั้งที่คำปรากฏ)
 text = "hello world hello python"
 word_count = {}
 for word in text.split():
+<<<<<<< HEAD
     word_count[word] = word_count.get(word, 0) + 1
 print(f"Word count: {word_count}") #Word count: {'hello': 2, 'world': 1, 'python': 1}
+=======
+    word_count[word] = word_count.get(word, 0) + 1      # ใช้ get() ถ้า key ไม่มีจะได้ 0
+print(f"Word count: {word_count}")      # แสดงผลการนับคำ
+>>>>>>> c7f5e05d71b6af52a40ead7b011b2d7d23a323e1
 
-# Use SETS when:
-# 1. You need unique elements
+# Use SETS when: (ใช้ SETS เมื่อ:)
+# 1. You need unique elements (ต้องการเก็บค่าไม่ซ้ำ)
 email_subscribers = {"alice@email.com", "bob@email.com", "charlie@email.com"}
+<<<<<<< HEAD
 email_subscribers.add("alice@email.com")  # Won't add duplicate
 print(f"Unique subscribers: {email_subscribers}") #Unique subscribers: {'charlie@email.com', 'bob@email.com', 'alice@email.com'}
+=======
+email_subscribers.add("alice@email.com")  # Won't add duplicate(ไม่เพิ่มค่าซ้ำ)
+print(f"Unique subscribers: {email_subscribers}")
+>>>>>>> c7f5e05d71b6af52a40ead7b011b2d7d23a323e1
 
-# 2. Mathematical set operations
+# 2. Mathematical set operations (ทำ operation แบบเซตทางคณิตศาสตร์)
 active_users = {"user1", "user2", "user3", "user4"}
 premium_users = {"user2", "user4", "user5"}
+<<<<<<< HEAD
 active_premium = active_users & premium_users
 print(f"Active premium users: {active_premium}") #Active premium users: {'user4', 'user2'}
+=======
+active_premium = active_users & premium_users       # ตัด intersection
+print(f"Active premium users: {active_premium}")
+>>>>>>> c7f5e05d71b6af52a40ead7b011b2d7d23a323e1
 
-# 3. Fast membership testing
+# 3. Fast membership testing (ตรวจสอบการเป็นสมาชิกได้เร็ว)
 valid_codes = {"A001", "B002", "C003", "D004"}
 user_code = "B002"
+<<<<<<< HEAD
 if user_code in valid_codes:  # O(1) average time เป็นวิธีการวัดประสิทธิภาพของโปรแกรม
+=======
+if user_code in valid_codes:  # O(1) average time(ตรวจสอบ membership O(1) โดยเฉลี่ย)
+>>>>>>> c7f5e05d71b6af52a40ead7b011b2d7d23a323e1
     print("Valid code!")
 
-# 4. Removing duplicates from lists
+# 4. Removing duplicates from lists (ลบค่าซ้ำใน list)
 numbers_with_duplicates = [1, 2, 2, 3, 3, 3, 4, 5]
+<<<<<<< HEAD
 unique_numbers = list(set(numbers_with_duplicates))
 print(f"Unique numbers: {unique_numbers}") #Unique numbers: [1, 2, 3, 4, 5]
+=======
+unique_numbers = list(set(numbers_with_duplicates))     # แปลงเป็น set แล้วกลับเป็น list
+print(f"Unique numbers: {unique_numbers}")
+
+
+""""
+Summ.
+    Dictionary → เก็บข้อมูลแบบ key-value, ค้นหาด้วย key, นับจำนวน, map ข้อมูล
+    Set → เก็บค่าที่ไม่ซ้ำ, operation แบบเซต (union, intersection), ตรวจสอบ membership, ลบ duplicate จาก list
+"""
+>>>>>>> c7f5e05d71b6af52a40ead7b011b2d7d23a323e1
