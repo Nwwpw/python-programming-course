@@ -7,6 +7,7 @@
         }
     - มี method ชื่อ get_average_grade() ที่คืนค่าเฉลี่ยคะแนนของนักเรียน
     - มี method ชื่อ get_grade_report() ที่คืนค่ารายงานผลการเรียนของนักเรียน
+    **ข้อสอบจะเป็นพวกนี้ แล้วให้เราพ่นเป็นโค้ดด้านล่าง**
 """
 
 class Student:
@@ -19,15 +20,26 @@ class Student:
 
     # Method to add a grade
     def add_grade(self, grade):
-        pass
+        if grade['grade'] > 0 and grade['grade'] <= 100:
+            self.grades.append(grade)
+            return f"Add grade for {grade} {grade['subject']}"
+        else:
+            return "Sorry plese try again(Must be 0-100) {grade.[subject]}"
 
     # Method to get the average grade
     def get_average_grade(self):
-        pass
+        sum = 0
+        for grade in self.grades:
+            #grade --> {'subject': "", 'grade': 20}
+            sum = sum + grade['grade']  #sum += grade['grade']
+        return sum / len(self.grades)
 
     # Method to get the grade report
     def get_grade_report(self):
-        pass
+        report = ""
+        for grade in self.grades:
+            report = report + f"Subject: {grade['subject']} = Grade: {grade['grade']}\n"
+        return report
 
 
 student = Student("John", 20, "S123")

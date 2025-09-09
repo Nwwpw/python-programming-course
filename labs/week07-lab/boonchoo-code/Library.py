@@ -54,8 +54,9 @@ class Library:
 
 # Example usage
 library = Library("City Library")
-print(library.add_book("Python Crash Course", "Eric Matthes"))
-print(library.add_book("Clean Code", "Robert Martin"))
-print(library.register_member("Alice"))
-print(library.borrow_book("Alice", "Python Crash Course"))
-print(library.show_available_books())
+print(library.add_book("Python Crash Course", "Eric Matthes"))      #Book 'Python Crash Course' by Eric Matthes added to library
+print(library.add_book("Clean Code", "Robert Martin"))      #Book 'Clean Code' by Robert Martin added to library
+print(library.register_member("Alice"))     #Member 'Alice' registered successfully
+print(library.borrow_book("Alice", "Python Crash Course"))      #Book 'Python Crash Course' borrowed by Alice
+print(library.show_available_books())       #Available Books:
+                                            #- Clean Code by Robert Martin
