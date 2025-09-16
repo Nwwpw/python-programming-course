@@ -65,3 +65,18 @@ shapes = [
 # Same method calls, different behaviors
 for shape in shapes:
     print_shape_info(shape)
+
+"""
+--print--
+Rectangle:
+  Area: 15.00
+  Perimeter: 16.00
+
+Circle:
+  Area: 50.27
+  Perimeter: 25.13
+
+Triangle:
+  Area: 6.00
+  Perimeter: 12.00
+"""

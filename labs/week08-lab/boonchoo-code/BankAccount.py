@@ -38,4 +38,5 @@ account = BankAccount("12345", 1000)
 print(account.get_balance())  # 1000
 account.deposit(500)
 account.withdraw(200)
+print(account.transaction_history)
 print(account)  # Account 12345: Balance $1300

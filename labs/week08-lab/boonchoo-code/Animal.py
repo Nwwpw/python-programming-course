@@ -17,7 +17,7 @@ class Animal:
 
 # Child class (Derived class)
 class Dog(Animal):
-    def __init__(self, name, breed):
+    def __init__(self, name, breed):    #(breed = สายพันธุ์)
         super().__init__(name, "Canine")  # Call parent constructor
         self.breed = breed
     
@@ -45,9 +45,9 @@ class Cat(Animal):
 dog = Dog("Max", "Golden Retriever")
 cat = Cat("Whiskers", "Orange")
 
-dog.eat()        # Inherited method
-dog.make_sound() # Overridden method
-dog.fetch()      # Dog-specific method
+dog.eat()        # Inherited method -> Max is eating
+dog.make_sound() # Overridden method -> Max barks: Woof!
+dog.fetch()      # Dog-specific method -> Max is fetching the ball
 
-cat.make_sound() # Overridden method
-cat.climb_tree() # Cat-specific method
+cat.make_sound() # Overridden method -> Whiskers meows: Meow!
+cat.climb_tree() # Cat-specific method -> Whiskers is climbing a tree
