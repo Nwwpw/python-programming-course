@@ -58,12 +58,19 @@ def get_divisibility_hint(number):
 
 def get_range_hint(number, current_min=1, current_max=100):
     # Return narrowed range around the number
-    print(f"HINT: The narrowed range around the number is {range(number-12, number+12)}")   #แต่ถ้าเจอ90+ หรือเลขน้อยมันจะทะลุ100 #กลับไปแก้ส่วนนี้
+    low = max(current_min, number-12)   #กันไม่ให้ต่ำกว่า1
+    high = min(current_max, number+12)  #กันไม่ให้ต่ำกว่า100
+    print(f"HINT: The narrowed range around the number is {low}-{high}")
 
 def get_thefirst_digit_hint(number):
     # Return the first digit of the number
+    first_digit = result//10    #ถ้ามันเป็น87 จะเอา87//10 = 8
+    print(f"HINT: The first digit of the number is {first_digit}")
+    """
+    อีกแบบตามไอเดียเพื่อน
     result = str(number)
-    print(f"HINT: The first digit of the number is {result[0]}")    #เอาเป็นไอเดียอื่นก็ได้ แล้วแต่ว่าคิดเอาไอเดียไหน เอาเลขมาละเอา10หารก็ได้ e.g.87//10 = 8
+    print(f"HINT: The first digit of the number is {result[0]}")
+    """
 
 print("=== Enhanced GUESSING GAME ===")
 print("Guess my number between 1 and 100!")
