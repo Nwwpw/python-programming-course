@@ -64,7 +64,7 @@ def get_range_hint(number, current_min=1, current_max=100):
 
 def get_thefirst_digit_hint(number):
     # Return the first digit of the number
-    first_digit = result//10    #ถ้ามันเป็น87 จะเอา87//10 = 8
+    first_digit = number//10    #ถ้ามันเป็น87 จะเอา87//10 = 8
     print(f"HINT: The first digit of the number is {first_digit}")
     """
     อีกแบบตามไอเดียเพื่อน
