@@ -4,9 +4,9 @@ Build a Text Analysis Tool that performs the following operations on user input 
 Core Features:
 
 1. Character Analysis:
-    - Count total characters (with and without spaces)
-    - Count vowels and consonants separately
-    - Find most frequent character
+    - Count total characters (with and without spaces(เอา, ไม่เอาช่องว่าง))
+    - Count vowels(สระ) and consonants(พยัญชนะ) separately
+    - Find most frequent character (หาว่าอักขระตัวไหนเยอะสุด)
 
 2. Word Analysis:
     - Count total words
@@ -25,8 +25,8 @@ Enter text: The Quick Brown Fox Jumps Over The Lazy Dog
 === TEXT ANALYSIS REPORT ===
 Character Analysis:
 - Total characters: 43 (with spaces), 35 (without spaces)
-- Vowels: 12 (e, u, i, o, o, u, o, e, e, a, o)
-- Consonants: 23
+- Vowels: 11 (e, u, i, o, o, u, o, e, e, a, o)
+- Consonants: 24
 - Most frequent: 'o' (appears 4 times)
 
 Word Analysis:
@@ -46,4 +46,37 @@ Transformations:
 
 USE: len(), split(), count(), upper(), lower(), title(), slicing operations
 
+"""
+
+#text = input("Enter text: ")
+text = "The Quick Brown Fox Jumps Over The Lazy Dog"
+
+print("=== TEXT ANALYSIS REPORT ===")
+print("Character Analysis:")
+print("- Total characters: %d (with spaces), %d (without spaces)" % (len(text), len(text) - text.count(' ')))   #ส่งมากกว่า1ตัวให้ใส่() [หลัง %] ถ้าตัวเดียวไม่ใส่ก็ได้
+vowels = text.count('a')+text.count('A')+text.count('e')+text.count('E')+text.count('i')+text.count('I')+text.count('o')+text.count('O')+text.count('u')+text.count('U')
+vowelsString = ""
+for char in text:
+    if char in ['a','e','i','o','u','A','E','I','O','U',]:
+        vowelsString += char + ", "
+print("- Vowels: %d (%s)" % (vowels, vowelsString[0:-2]))   #บรรทัดที่62-63เหมือนกันเลือกใช้ตามชอบ
+print(f"- Consonants: {len(text) - text.count(' ')-vowels}")
+print("- Most frequent: ")
+
+print("Word Analysis: ")
+print("- Total words:  %d" % len(text.split()))
+
+"""
+print("- Longest word: ")
+print("- Shortest word: ")
+print("- Words starting with vowels: ")
+print("- Words starting with consonants: ")
+
+print("Transformations: ")
+print("- Title Case: ")
+print("- Upper Case: ")
+print("- Lower Case: ")
+print("- Acronym: ")
+print("- Reversed Text: ")
+print("- Words Reversed: ")
 """
