@@ -64,7 +64,7 @@ print(f"- Consonants: {len(text) - text.count(' ')-vowels}")
 print("- Most frequent: ")
 
 print("Word Analysis: ")
-print("- Total words:  %d" % len(text.split()))
+print("- Total words: %d" % len(text.split()))
 
 """
 print("- Longest word: ")
